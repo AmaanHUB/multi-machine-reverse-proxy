@@ -1,45 +1,36 @@
-# Vagrant Multi-Machine (With One Vagrantfile)
+# Vagrant Multi-Machine With Nginx Reverse Proxy
 
-## Task
+## Summary
 
-### Summary
+Our app is currently running on port 3000, in our multi vagrant machine.
+This fine for development but browsers use port 80 by default to load web applications.
 
-The sample application has the ability to connect to a database. We need to provision our development environment with a vm for the database and one for the database.
+We could get the app to run on port 80 but that requires giving the app more privileges than we want to which is very dangerous.
 
-Vagrant is capable of running two or more virtual machines at once with different configurations.
+We need to set up a reverse proxy.
 
-### Tasks
+## Tasks
 
-* Research how to create a multi machine vagrant environment
-* Add a second virtual machine called "db" to your Vagrant file
-* Configure the db machine with a different IP from the app
-* Provision the db machine with a MongoDB database
+Research how to install and configure Nginx as a reverse proxy. This will listen for requests on port 80 and pass them on to our app on port 3000.
 
+## Notes
 
-### Notes
+You will find many many tutorials on how to do this.
 
-When you have the second machine running further configuration of the app is required to make it use the database. We will cover this in the next lesson.
+If you have started your app and you can see it running on development.local ( without the :3000 ) you're configuration is correct.
 
-You can test your database is working correctly by running the test suite in the test folder. There are two sets of tests. One for the app VM and one for the db VM. Make them all pass.
+You only need to edit one configuration file to do this.
 
-```
-cd test
-rake spec
-```
+Once you've completed this task, amend your provisioning script for your app VM so that it installs nginx and does the necessary configuration. Make sure you recreate your VM from scratch and run this provisioning script in order to test it works properly.
 
 
-### Acceptance Criteria
+
+## Acceptance Criteria
 
 * Uses vagrant file
-* Create 2 VM APP and Mongod
-* Localhost set to development.local
-
-* App works on Port 3000 (development.local:3000)
-
+* Localhost set to development.local (unless you computer can't handle this)
+* port 80 has App running (you see the sparta logo on development.local)
 * Work with only command "vagrant up" &/or mininum commands
-* All tests passing
-* works on /posts
-* works on /fibonacci/30
 
 * Documentation exists as README.md file
 * Documentation includes: Intro (purpose of repo), Pre Requisits  and Intructions
@@ -59,6 +50,7 @@ rake spec
 ## Introduction
 
 Running a multi-virtual machine environment to make sure the Sparta app works. The two machines make up of a database and the app.
+
 ## Running
 * First clone the directory with `git clone`
 * Go into the directory and run `vagrant up`
