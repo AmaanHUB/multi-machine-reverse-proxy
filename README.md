@@ -47,7 +47,7 @@ Once you've completed this task, amend your provisioning script for your app VM 
 
 ## Introduction
 
-Running a multi-virtual machine environment to make sure the Sparta app works. The two machines make up of a database and the app.
+Running a multi-virtual machine environment to make sure the Sparta app works and set up a development environment. The two machines make up of a database and the app.
 
 ## Running
 * First clone the directory with `git clone`
