@@ -31,12 +31,10 @@ Once you've completed this task, amend your provisioning script for your app VM 
 * Localhost set to development.local (unless you computer can't handle this)
 * port 80 has App running (you see the sparta logo on development.local)
 * Work with only command "vagrant up" &/or mininum commands
-
 * Documentation exists as README.md file
 * Documentation includes: Intro (purpose of repo), Pre Requisits  and Intructions
 * Instructions have a clear step by step
-
-* repo exists on github
+* Repo exists on github
 
 # Documentation
 
