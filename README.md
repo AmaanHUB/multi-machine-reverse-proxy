@@ -52,4 +52,4 @@ Running a multi-virtual machine environment to make sure the Sparta app works an
 ## Running
 * First clone the directory with `git clone`
 * Go into the directory and run `vagrant up`
-* **Ta-dah, your environment is up**
+* **Ta-dah, your environment is up, YAY!**
