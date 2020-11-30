@@ -33,8 +33,8 @@ sudo systemctl restart nginx.service
 # Install pm2 with npm
 sudo npm install pm2 -g
 
-#  Setting bash env
- echo "export DB_HOST='192.168.33.20'" >> ~/.bashrc
+# Setting bash env
+echo "export DB_HOST='192.168.33.20'" >> ~/.bashrc
 
 # go to app and run
 cd /app
